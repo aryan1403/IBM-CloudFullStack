@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputfields{
+            width: 300px;
+            height: 30px;
+            margin-bottom: 14px;
+        }
+        #loginbtn{
+            width: 300px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script>
+        function login() {
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let email = document.getElementById('email').value;
+            let username = document.getElementById('uname').value;
+            let pass = document.getElementById('pass').value;
+            console.log(name, age, email, username, pass);
+        }
+    </script>
+</head>
+<body>
+    <div style="margin-left: auto; margin-right: auto; width: 300px; margin-top: 100px;">
+        <h1>Login</h1>
+        <input id="name" class="inputfields" type="text" placeholder="Name" /><br/>
+        <input id="age" class="inputfields" type="number" placeholder="Age" /><br/>
+        <input id="email" class="inputfields" type="email" placeholder="Email" /><br/>
+        <input id="uname" class="inputfields" type="text" placeholder="Username" /><br/>
+        <input id="pass" class="inputfields" type="password" placeholder="Password" /><br/>
+        <button id="loginbtn" onclick="login()">Login</button>
+    </div>
+</body>
+</html>
