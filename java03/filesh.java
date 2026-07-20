@@ -1,5 +1,6 @@
 package java03;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,6 +9,20 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class filesh {
+
+    public void readData(File f) {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(f));
+            String line;
+
+            while((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) {
         File f = new File("java03/names.txt");
 
@@ -15,6 +30,7 @@ public class filesh {
             while(sc.hasNextLine()) {
                 System.out.println(sc.nextLine());
             }
+            sc.close();
         } catch (FileNotFoundException e2) {
             e2.printStackTrace();
         }
