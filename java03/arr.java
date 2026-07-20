@@ -47,13 +47,24 @@ public class arr {
 
             int d = 3 / 0;
             System.out.println(d);
-        } catch (ArithmeticException e) {
+        } catch (CustomException e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
             System.out.println("Finally block executed.");
         }
         
     }
+}
+
+class CustomException extends RuntimeException {
+    public CustomException(String message) {
+        super(message);
+    }
+
+    public CustomException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
 }
 
 

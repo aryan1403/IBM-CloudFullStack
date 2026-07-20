@@ -9,7 +9,7 @@ enum Day {
 public class e {
 
     public static void printDay(Day day) {
-        
+
         switch(day) {
             case Monday:
                 System.out.println("You selected option 1.");
@@ -37,10 +37,10 @@ public class e {
 
 
         switch(choice) {
-            case Day.Monday:
+            case "Monday":
                 System.out.println("You selected option 1.");
                 break;
-            case "tuesday":
+            case "Tuesday":
                 System.out.println("You selected option 2.");
                 break;
             case "Wednesday":
