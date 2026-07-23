@@ -10,13 +10,5 @@ const connectDB = async () => {
         process.exit(1);
     }
 };
-// connectDB().then(con => {
-// }).catch((err) => {
-// });
-// connectDB().then(() => {
-//     console.log('Database connection established');
-// }).catch((err) => {
-//     console.error('Database connection error:', err);
-// });
 
 module.exports = connectDB;
